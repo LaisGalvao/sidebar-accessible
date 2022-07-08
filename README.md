@@ -1,4 +1,5 @@
 # sidebar-accessible
+Um componente Vue simples afim de validar funcionalidades e estudar sobre acessibilidade em menus de navegação.
 
 ## Project setup
 ```
