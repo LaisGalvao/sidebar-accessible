@@ -12,7 +12,7 @@
         @keypress.13="openSubmenu('sub1')"
       >
         <span>Menu 1</span>
-        <ul v-for="(item, index) in items" id="sub1" class="side" role="menu">
+        <ul v-for="(item, index) in items" id="sub1" class="side" role="menu" :key="index">
           <li :id="index" role="menuitem" aria-haspopup="true" tabindex="0">{{ item.name }}</li>
           <!-- <li role="menuitem" aria-haspopup="true" tabindex="0">Item 2</li>
           <li role="menuitem" aria-haspopup="true" tabindex="0">Item 3</li>
@@ -29,7 +29,7 @@
         @keypress.13="openSubmenu('sub2')"
       >
         <span>Menu 2</span>
-        <ul v-for="(item, index) in items2" id="sub2" class="side" role="menu">
+        <ul v-for="(item, index) in items2" id="sub2" class="side" role="menu" :key="index">
           <li :id="index">{{ item.name }}</li>
           <!-- <li>Item 2</li>
           <li>Item 3</li> -->
