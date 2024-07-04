@@ -12,12 +12,12 @@
         @keypress.13="openSubmenu('sub1')"
       >
         <span>Menu 1</span>
-        <ul id="sub1" class="side" role="menu">
-          <li role="menuitem" aria-haspopup="true" tabindex="0">Item 1</li>
-          <li role="menuitem" aria-haspopup="true" tabindex="0">Item 2</li>
+        <ul v-for="(item, index) in items" id="sub1" class="side" role="menu">
+          <li :id="index" role="menuitem" aria-haspopup="true" tabindex="0">{{ item.name }}</li>
+          <!-- <li role="menuitem" aria-haspopup="true" tabindex="0">Item 2</li>
           <li role="menuitem" aria-haspopup="true" tabindex="0">Item 3</li>
           <li role="menuitem" aria-haspopup="true" tabindex="0">Item 4</li>
-          <li role="menuitem" aria-haspopup="true" tabindex="0">Item 5</li>
+          <li role="menuitem" aria-haspopup="true" tabindex="0">Item 5</li> -->
         </ul>
       </li>
 
@@ -29,10 +29,10 @@
         @keypress.13="openSubmenu('sub2')"
       >
         <span>Menu 2</span>
-        <ul id="sub2" class="side" role="menu">
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
+        <ul v-for="(item, index) in items2" id="sub2" class="side" role="menu">
+          <li :id="index">{{ item.name }}</li>
+          <!-- <li>Item 2</li>
+          <li>Item 3</li> -->
         </ul>
       </li>
 
@@ -61,6 +61,20 @@ export default {
     return {
       sub: false,
       main: false,
+      items: [
+        { id: 1, name: 'Item 1' },
+        { id: 2, name: 'Item 1' },
+        { id: 3, name: 'Item 1' },
+        { id: 4, name: 'Item 1' },
+        { id: 5, name: 'Item 1' },
+      ],
+      items2: [
+        { id: 1, name: 'Item 1' },
+        { id: 2, name: 'Item 1' },
+        { id: 3, name: 'Item 1' },
+        { id: 4, name: 'Item 1' },
+        { id: 5, name: 'Item 1' },
+      ]
     };
   },
   methods: {
