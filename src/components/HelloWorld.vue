@@ -13,7 +13,7 @@
       >
         <span>Menu 1</span>
         <ul v-for="(item, index) in items" id="sub1" class="side" role="menu" :key="index">
-          <li :id="index" role="menuitem" aria-haspopup="true" tabindex="0">{{ item.name }}</li>
+          <li :id="index" role="menuitem" aria-haspopup="true" tabindex="0">{{ item.name + '-' + index }}</li>
           <!-- <li role="menuitem" aria-haspopup="true" tabindex="0">Item 2</li>
           <li role="menuitem" aria-haspopup="true" tabindex="0">Item 3</li>
           <li role="menuitem" aria-haspopup="true" tabindex="0">Item 4</li>
@@ -30,7 +30,7 @@
       >
         <span>Menu 2</span>
         <ul v-for="(item, index) in items2" id="sub2" class="side" role="menu" :key="index">
-          <li :id="index">{{ item.name }}</li>
+          <li :id="index">{{ item.name + '-' + index }}</li>
           <!-- <li>Item 2</li>
           <li>Item 3</li> -->
         </ul>
